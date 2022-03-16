@@ -101,15 +101,78 @@ namespace tic_Tac_Toe_2
             else if (text.StartsWith("winner"))
             {
                 Label1.Dispatcher.Invoke(new Action(() => Label1.Content = "You win!!!"));
+                MessageBoxResult result = MessageBox.Show("Would you like to play again?", "Play again", MessageBoxButton.YesNoCancel);
+                switch (result)
+                {
+                    case MessageBoxResult.Yes:
+                        client.WriteLine("again");
+                        Button0.Content = "";
+                        Button1.Content = "";
+                        Button2.Content = "";
+                        Button3.Content = "";
+                        Button4.Content = "";
+                        Button5.Content = "";
+                        Button6.Content = "";
+                        Button7.Content = "";
+                        Button8.Content = "";
+                        break;
+                    case MessageBoxResult.No:
+                        
+                        break;
+                    case MessageBoxResult.Cancel:
+                        
+                        break;
+                }
             }
             else if (text.StartsWith("loser"))
             {
                 Label1.Dispatcher.Invoke(new Action(() => Label1.Content = "You lose :("));
+                MessageBoxResult result = MessageBox.Show("Would you like to play again?", "Play again", MessageBoxButton.YesNoCancel);
+                switch (result)
+                {
+                    case MessageBoxResult.Yes:
+                        client.WriteLine("again");
+                        Button0.Content = "";
+                        Button1.Content = "";
+                        Button2.Content = "";
+                        Button3.Content = "";
+                        Button4.Content = "";
+                        Button5.Content = "";
+                        Button6.Content = "";
+                        Button7.Content = "";
+                        Button8.Content = "";
+                        break;
+                    case MessageBoxResult.No:
+
+                        return;
+                    case MessageBoxResult.Cancel:
+
+                        return;
+                }
             }
             else if (text.StartsWith("tie"))
             {
                 Label1.Dispatcher.Invoke(new Action(() => Label1.Content = "Nobody wins :|"));
-
+                MessageBoxResult result = MessageBox.Show("Would you like to play again?", "Play again", MessageBoxButton.YesNoCancel);
+                switch (result)
+                {
+                    case MessageBoxResult.Yes:
+                        client.WriteLine("again");
+                        Button0.Content = "";
+                        Button1.Content = "";
+                        Button2.Content = "";
+                        Button3.Content = "";
+                        Button4.Content = "";
+                        Button5.Content = "";
+                        Button6.Content = "";
+                        Button7.Content = "";
+                        Button8.Content = "";
+                        break;
+                    case MessageBoxResult.No:
+                        return;
+                    case MessageBoxResult.Cancel:
+                        return;                
+                }
             }
         }
     }

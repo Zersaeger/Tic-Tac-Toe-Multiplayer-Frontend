@@ -31,5 +31,6 @@
             <Button x:Name="Button5" Grid.Column="2" Content="" Grid.Row="1" Background="#40444b" Click="Button_Click" FontSize="100" Foreground="White"/>
             <Button x:Name="Button8" Grid.Column="2" Content="" Grid.Row="2" Background="#40444b" Click="Button_Click" FontSize="100" Foreground="White"/>
         </Grid>
+        
     </Grid>
 </Window>
